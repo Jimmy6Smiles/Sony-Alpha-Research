@@ -1,0 +1,39 @@
+{
+  "target": {
+    "model": "ILCE-1M2",
+    "firmware": "4.00",
+    "architecture": "AArch64"
+  },
+  "identity_origin": "Locally recorded original-firmware extraction manifest; not a vendor-published digest. Firmware files are not included.",
+  "update_package": {
+    "bytes": 1194332648,
+    "sha256": "f6f8db5735fd15584dfc0118f84e537876c3aaeba72a9971388c21334ce34614"
+  },
+  "extracted_files": {
+    "libJiritsu.so": {
+      "size": 237512,
+      "sha256": "e1bf563806b3bbf95c09e19e9a0282c49d32b22a56f686e4cca7fa720031cc4b"
+    },
+    "libsencore.so": {
+      "size": 393712,
+      "sha256": "451be2666adcfb75eb49c379fa75f53b48e3a609121b2a7faf55583575faa453"
+    },
+    "sen.elf": {
+      "size": 27240,
+      "sha256": "9e3236666176b69746848edaac31e1e0ef00c4e80a9f062794ff62be2d605470"
+    },
+    "im.elf": {
+      "size": 40920,
+      "sha256": "5171f576d8b76cfbf15581389183b390c445bd6ff9dd97fd6668c5f64e77dc91"
+    },
+    "appFw.so": {
+      "size": 94665016,
+      "sha256": "d04cc70b41382a147ef5c67d7e86ba706d66526aee17619767b07cbb416b77ca"
+    }
+  },
+  "provenance": {
+    "kind": "static identity manifest",
+    "retained_source_sha256": "3d36889380681c3e818fa819f60bfa2881a54d890c75b3399f6828b455e3b221",
+    "raw_source_included": false
+  }
+}

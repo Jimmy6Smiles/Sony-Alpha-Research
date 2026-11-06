@@ -1,0 +1,13 @@
+# Documentation-only publication. New files require deliberate inclusion.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/README.zh-CN.md
+!/docs/
+!/evidence/
+/docs/*
+!/docs/*.md
+/evidence/*
+!/evidence/firmware-identities.json
+!/evidence/observations.json

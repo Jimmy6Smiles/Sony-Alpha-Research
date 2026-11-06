@@ -1,0 +1,244 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-11-05",
+  "target": "Sony ILCE-1M2 firmware 4.00",
+  "scope": "Curated selected fields; no raw records or self-contained hardware reproduction kit. Historical experiments do not represent current installation state.",
+  "entries": [
+    {
+      "id": "E01",
+      "date": "2026-11-01",
+      "level": [
+        "device record",
+        "host USB trace"
+      ],
+      "claim": "Initial authentication handed off from normal MSC to service PID 0336; this record alone does not establish second-stage authentication.",
+      "observed": {
+        "successful_bulk_completions": 14,
+        "bytes_per_completion": 516,
+        "service_pid_hex": "0336"
+      },
+      "provenance": [
+        {
+          "kind": "experiment note",
+          "retained_source_sha256": "539c0465f1e005ae65b97981beaa366b2bdd7097faa1958e77c29d8d8be3b091",
+          "raw_source_included": false
+        },
+        {
+          "kind": "selected host completion fields",
+          "retained_source_sha256": "6b9abb7c75f90be502b76dc4a384d5929fc9d79bf38ad395e014926235bf0717",
+          "raw_source_included": false
+        }
+      ]
+    },
+    {
+      "id": "E02",
+      "date": "2026-11-03",
+      "level": [
+        "device record",
+        "user-confirmed cold start"
+      ],
+      "claim": "The existing ordinary 53-byte marker matched after battery-removal cold startup; the read build could not create it.",
+      "observed": {
+        "action": "read",
+        "result": 53,
+        "error": 0,
+        "matched": true,
+        "accepted": true
+      },
+      "cleanup": "A separate exact-match removal completed and absence was checked.",
+      "provenance": [
+        {
+          "kind": "decoded readback",
+          "retained_source_sha256": "f1a26eb11556736661f18509a57ead3341566cc620bd54d0f0b30a14b69c3143",
+          "raw_source_included": false
+        },
+        {
+          "kind": "create/cold-start/remove chronology",
+          "retained_source_sha256": "91daafdbcd66c73a0598866c9e34cec69aa4b5b82eeb43ef4442df3e1fea247f",
+          "raw_source_included": false
+        }
+      ]
+    },
+    {
+      "id": "E03",
+      "date": "2026-11-03",
+      "level": [
+        "device record",
+        "startup context",
+        "user-confirmed cold start"
+      ],
+      "claim": "The process-guarded factory-helper constructor receipt was absent before and present after the startup experiment. Precise execution time is not encoded in the receipt.",
+      "observed": {
+        "preboot_receipt": 0,
+        "postboot_receipt": 1,
+        "postboot_accepted": true
+      },
+      "cleanup": "Matching preload configuration was removed before its library and receipt.",
+      "provenance": [
+        {
+          "kind": "preboot decoded transaction",
+          "retained_source_sha256": "239a255ccf9a642d2d5ebd751b297247ef54e53d71708def09a15b57e9d66390",
+          "raw_source_included": false
+        },
+        {
+          "kind": "postboot decoded transaction",
+          "retained_source_sha256": "ddc648b5f4572abc879c3fb4c4dd6e49cdf261c80659e84a91d5502ecf08e011",
+          "raw_source_included": false
+        },
+        {
+          "kind": "loader validation and startup context",
+          "retained_source_sha256": "401f0fcb770ff7b4910974fbf687fb508a74e330f50c996c327a3e0319cbfb74",
+          "raw_source_included": false
+        }
+      ]
+    },
+    {
+      "id": "E04",
+      "date": "2026-11-04",
+      "level": [
+        "device record",
+        "user-confirmed cold start"
+      ],
+      "claim": "Automatic worker delivery and separate camera-main-process execution both completed.",
+      "observed": {
+        "transaction_accepted": true,
+        "main_process_loaded": true,
+        "worker_pid": 985,
+        "worker_parent": 1,
+        "transfer_phase": 12,
+        "transfer_error": 0,
+        "transfer_ok": true,
+        "main_process_pid": 533,
+        "main_process_phase": 2,
+        "main_process_accepted": true
+      },
+      "provenance": [
+        {
+          "kind": "decoded delivery and execution receipts",
+          "retained_source_sha256": "b25ad6eedd8faef3ee5db6fe06d91e90d196b1a4de0f8ba16c229cff685fdd34",
+          "raw_source_included": false
+        },
+        {
+          "kind": "chronology and independent cleanup",
+          "retained_source_sha256": "c081c19679c5684f2ad542a881160f2d064dcba0c9a00fb5f0b69407348f29a2",
+          "raw_source_included": false
+        }
+      ]
+    },
+    {
+      "id": "E05",
+      "date": "2026-11-05",
+      "level": [
+        "build identity",
+        "device record",
+        "user observations"
+      ],
+      "claim": "A native-Fsys SD bootstrap family reached the resident main-process menu module. This later observed candidate was not stable.",
+      "observed": {
+        "menu_matches": 1,
+        "bootstrap": 5,
+        "state_before": 2,
+        "state_after": 2,
+        "pid": 533
+      },
+      "paired_build": {
+        "revision": 14,
+        "card_reader": "native",
+        "configured_slot": 1,
+        "native_roots": [
+          "/nondev/rm1",
+          "/nondev/rm2",
+          "/nondev/rm3"
+        ],
+        "payload": {
+          "SD_SLOT1/SONYME51.SO": {
+            "bytes": 133768,
+            "sha256": "0745456f56e18af55b3a63d1c6728be095c77b5922afc7122f4167751e160472"
+          }
+        }
+      },
+      "limits": [
+        "Native removable root names do not establish a universal physical-slot mapping.",
+        "Build-time hardware_tested flags are not overwritten with later observations.",
+        "Visible disconnected menu observations establish a prototype, not reliable navigation."
+      ],
+      "provenance": [
+        {
+          "kind": "resident observer",
+          "retained_source_sha256": "0cda5c9b292521db565dad6de8660e5f9b4ce030fe7bd440a3c68281e237edbe",
+          "raw_source_included": false
+        },
+        {
+          "kind": "paired bootstrap identity",
+          "retained_source_sha256": "34566f41de07ff48eefd94563687118443465103230fa4a3bba95d515f8e40d4",
+          "raw_source_included": false
+        },
+        {
+          "kind": "installation identity and later acceptance failure",
+          "retained_source_sha256": "441f832280d4ebf98c84fe5b5e1872325478269c00e91021bc1c9f202a6b2a27",
+          "raw_source_included": false
+        }
+      ]
+    },
+    {
+      "id": "E06",
+      "date": "2026-11-03",
+      "level": [
+        "device record",
+        "separate user visual feedback"
+      ],
+      "claim": "The approximately ten-second full-page experiment completed native show/hide and AppFw callback observation. Later user feedback described normal text/footer appearance; this is not a complete interaction test.",
+      "observed": {
+        "controls_checked": 14,
+        "callbacks": 515,
+        "show_returned": 1,
+        "hide_returned": 1,
+        "hook_restored": 1,
+        "timed_out": 0,
+        "visible_ui_verified_in_decoder": false,
+        "resources_retained_until_reset": true
+      },
+      "limits": [
+        "The decoder flag records instrumented evidence, not subsequent visual feedback.",
+        "Hidden resources and retained code still needed physical cleanup."
+      ],
+      "provenance": [
+        {
+          "kind": "decoded native page observation",
+          "retained_source_sha256": "31dda21f20796a040ee5524b73134db05c8e92f34a744aa097beb3b06dad5671",
+          "raw_source_included": false
+        },
+        {
+          "kind": "layer initialization comparison",
+          "retained_source_sha256": "46c251fb62c44b748808c24b3860416ba7294c34da71699b81c9de5408cd8302",
+          "raw_source_included": false
+        }
+      ]
+    },
+    {
+      "id": "E07",
+      "date": "2026-11-05",
+      "level": [
+        "device record",
+        "user observations"
+      ],
+      "claim": "A later experimental runtime failed repeated-navigation and lifecycle acceptance; original menu input did not reliably recover after sleep/wake.",
+      "observed": {
+        "hardware_acceptance": "failed",
+        "stable_extension_sdk": false
+      },
+      "provenance": [
+        {
+          "kind": "prior generation and input failure analysis",
+          "retained_source_sha256": "d5b3fa2c893d4ee6e75079d4450f95f9b983a54374d262c7d7fca3706a710c73",
+          "raw_source_included": false
+        },
+        {
+          "kind": "later preserved failure analysis",
+          "retained_source_sha256": "b75e11c09898b93a48d60bead06a9f9091be5ca894266c7b2cfdbe59a00ec6f2",
+          "raw_source_included": false
+        }
+      ]
+    }
+  ]
+}
