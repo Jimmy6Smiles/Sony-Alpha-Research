@@ -1,0 +1,5 @@
+format: 1
+name: Sony-Alpha-Research
+summary: Research on service execution, persistent startup and SD-card extension loading on Sony Alpha cameras. Tested on ILCE-1M2 firmware 4.00.
+category: guide
+cameras: ILCE-1M2
